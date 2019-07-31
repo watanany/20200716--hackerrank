@@ -1,18 +1,15 @@
 module Main where
 
-import Data.Int (Int64)
-
-
 main :: IO ()
 main = do
-  count <- readLn :: IO Int64
+  count <- readLn :: IO Integer
   line <- getLine
-  let ar = map read $ words line :: [Int64]
+  let ar = map read $ words line :: [Integer]
   print $ aVeryBigSum ar
 
 
 -- version not using sum
-aVeryBigSum :: [Int64] -> Int64
+aVeryBigSum :: [Integer] -> Integer
 aVeryBigSum ar = f ar 0
   where
     f (x:[]) acc = x + acc
