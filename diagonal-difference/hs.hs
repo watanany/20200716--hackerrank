@@ -7,6 +7,7 @@ import Debug.Trace
 import Control.Monad (forM)
 
 
+{-
 main :: IO ()
 main = do
   count <- readLn :: IO Int
@@ -14,6 +15,20 @@ main = do
     line <- getLine
     return $ map read $ words line :: IO [Int]
   print $ diagonalDifference arr
+-}
+
+
+-- version not using `do` expression
+main :: IO ()
+main =
+  (readLn :: IO Int) >>=
+    \count ->
+      (forM [0..(count - 1)] $ \_ ->
+        getLine >>=
+          \line ->
+            return $ map read $ words line :: IO [Int]) >>=
+              \arr ->
+                print $ diagonalDifference arr
 
 
 -- unsafe
