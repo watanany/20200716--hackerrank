@@ -12,7 +12,7 @@ main = do
 -}
 
 
--- version not using do expression
+-- version not using `do` expression
 main :: IO ()
 main =
   (readLn :: IO Integer) >>
