@@ -1,3 +1,5 @@
+{-# LANGUAGE Strict #-}
+
 module Main where
 
 main :: IO ()
