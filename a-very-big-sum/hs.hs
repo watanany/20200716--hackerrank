@@ -2,7 +2,7 @@ module Main where
 
 main :: IO ()
 main = do
-  count <- readLn :: IO Integer
+  _ <- readLn :: IO Integer
   line <- getLine
   let ar = map read $ words line :: [Integer]
   print $ aVeryBigSum ar
