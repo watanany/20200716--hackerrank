@@ -27,8 +27,8 @@ main =
         getLine >>=
           \line ->
             return $ map read $ words line :: IO [Int]) >>=
-              \arr ->
-                print $ diagonalDifference arr
+        \arr ->
+          print $ diagonalDifference arr
 
 
 -- unsafe
