@@ -3,7 +3,6 @@
 module Main where
 
 
-import Debug.Trace
 import Control.Monad (forM)
 
 
@@ -31,7 +30,6 @@ main =
           print $ diagonalDifference arr
 
 
--- unsafe
 diagonalDifference :: [[Int]] -> Int
 diagonalDifference arr = abs $ (sum a) - (sum b)
   where
